@@ -1,10 +1,8 @@
 ## **Alexei Turencko**
 ---
-
 ### **Contacts:**
-***
-    *E-mail: *turencko.alexei@yandex.ru*
-    *Telegram: *[@AlexeiTurencko](https://t.me/AlexeiTurencko)*
-    *Vkontakte: *[Alexei Turencko](https://vk.com/id44320138)*
-    *GitHub: *https://github.com/Alexei-T1*
+    * E-mail: _turencko.alexei@yandex.ru_
+    * Telegram: _[@AlexeiTurencko](https://t.me/AlexeiTurencko)_
+    * Vkontakte: _[Alexei Turencko](https://vk.com/id44320138)_
+    * GitHub: _https://github.com/Alexei-T1_
 ---

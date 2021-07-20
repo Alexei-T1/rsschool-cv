@@ -1,0 +1,331 @@
+body {
+    /* --Positioning-- */
+    position: relative;
+    /* --Block model-- */
+    z-index: -100;
+    /* --decoration-- */ 
+    background: linear-gradient(150deg, #f4ba88, 50%, #716058 50%, #716058);
+}
+.container-general { 
+    /* --Positioning-- */
+    position: relative;
+    margin: 0 auto;
+    /* --Block model-- */
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    /* --decoration-- */ 
+    background: #ffffff;
+    z-index: -50;
+}
+
+
+.container-header {
+    /* --Block model-- */
+    display: flex;
+    height: 15vh;
+}
+.header {
+    /* --Positioning-- */
+    margin: auto 0 auto 5rem;
+}
+.text-white {
+    /*--Typography--*/
+    color: #ffffff;
+}
+.text-black {
+    /* --Positioning-- */
+    padding-left: 15px;
+    /*--Typography--*/
+    color: #000000;
+}
+.header_hi {
+    /*--Typography--*/
+    font-size: 20px;   
+}
+.header_name {
+    /* --Positioning-- */
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+     /*--Typography--*/
+    font-size: 3rem;
+    letter-spacing: 3px;   
+}
+.header_name__firstName {
+     /* --Block model-- */
+    display: inline-block;
+}
+.header_name__surName {
+    /* --Positioning-- */
+    margin-left: 20px;
+     /* --Block model-- */
+     display: inline-block;    
+}
+.header_devel {
+    /* --Positioning-- */
+    text-align: center;
+     /*--Typography--*/
+     font-size: 1.8rem;  
+}
+
+
+.container-main {
+    /* --Positioning-- */
+    margin-bottom: 2rem;
+}
+.main {
+    /* --Block model-- */
+    display: flex;
+}
+
+/* --left side-- */
+.right-side {
+    /* --Positioning-- */
+    position: relative;
+    margin: 0 0 0 2rem;
+    /* --Block model-- */
+    flex: 2;
+}
+/* --Background left side-- */
+.right-side::before {
+    /* --Positioning-- */
+    position: absolute;
+    top: -15vh;
+    /* --Block model-- */
+    content: '';
+    z-index: -10;
+    width: 100%;
+    height: calc(100% + 15vh);
+    /* --decoration-- */ 
+    background: linear-gradient(100deg, black, 86%, white);
+    border-left: 1px solid #ffffff;
+}
+
+.my-photo {
+    /* --Positioning-- */
+    text-align: center;
+}
+.my-photo > img{
+max-width: 100%;
+height: auto;
+}
+.title {
+    /* --Positioning-- */
+    margin-left: 2rem;
+     /*--Typography--*/
+     font-size: 1.5rem;
+     line-height: 3.5rem;  
+}
+.content {
+    /* --Positioning-- */
+    margin: 0 2rem;
+    /*--Typography--*/
+    font-size: 1rem;
+    line-height: 1.2;
+    text-align: justify; 
+    text-indent: 2rem;
+}
+.contacts::before {
+    /* --Positioning-- */
+    position: absolute;
+    /* --Block model-- */
+    content: '';
+    width: 70%;
+    z-index: -10;
+    /* --decoration-- */
+    border-top: 2px solid #ffffff;
+}
+.contacts {
+    /* --Positioning-- */
+    margin-bottom: 1rem;
+    margin-top: 1.5rem;  
+}
+.content_li{
+    /* --Positioning-- */
+    margin-bottom: 0.5rem;
+}
+.content_li > a {
+    /* --Positioning-- */
+    align-items: center;
+    /* --Block model-- */
+    display: flex;
+}
+.content_li__img {
+    /* --Positioning-- */
+    margin-right: 0.5rem;
+    /* --Block model-- */
+    height: 1.5rem;
+}
+.content_li__resource {
+    /* --Positioning-- */
+    margin-left: 0.5rem;
+}
+
+
+/* --right side-- */
+.text-content-bg {
+    /*--Typography--*/
+    font-size: 1.1rem;
+}
+.left-side::after {
+    /* --Positioning-- */
+    top: -25px;
+    right: 10vh;
+    /* --Block model-- */
+    position: absolute;
+    width: 82%;
+    height: 100%;
+    content: '';
+    z-index: -10;
+    /* --decoration-- */
+    border-top: 3px solid #000000;
+}
+.left-side {
+    /* --Block model-- */
+    position: relative;
+    flex: 4; 
+}
+.left-side-container{
+    /* --Positioning-- */
+    margin: 1rem auto 0 auto;
+    /* --Block model-- */
+    width: 80%;
+}
+
+.content_li_left{
+    /* --Positioning-- */
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    /* --decoration-- */
+    list-style: disc;
+}
+.content_li_left > a {
+    /* --decoration-- */
+    color: #0000ff;
+    text-decoration: underline;
+}
+.content_li_left > a:hover {
+    /* --decoration-- */
+    background-color: #14cee64f;
+    color: #000000;
+    text-decoration: underline;
+}
+
+.skills_li__what {
+    /* --Positioning-- */
+    margin-bottom: 0.5rem;
+    /*--Typography--*/
+    font-weight: bold;
+}
+.skills_li__what:last-child {
+    /* --Positioning-- */
+    margin-bottom: 0;
+}
+.skills_li__skills {
+    /* --Positioning-- */
+    margin-left: 2rem;
+    /*--Typography--*/
+    font-style: italic;
+    /* --decoration-- */
+    background-color: #b6b6b63a;
+}
+
+.content_code {
+    /* --Block model-- */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.code_img {
+    /* --Block model-- */
+    max-width: 100%;
+    height: auto;
+    /* --decoration-- */
+    border-radius: 6px;
+} 
+.content_code > figcaption{
+    /* --Positioning-- */
+    text-indent: 0;
+    text-align: center;
+    /*--Typography--*/
+    line-height: 2rem;
+    font-size: 1rem;  
+}
+
+.languages {
+    /* --Positioning-- */
+    margin-top: 0.5rem;
+}
+.languages_li__what {
+    /* --Block model-- */
+    display: inline-block;
+    /*--Typography--*/
+    font-weight: bold;
+}
+.languages_li__skills {
+    /* --Positioning-- */
+    margin-left: 1rem;
+    /*--Typography--*/
+    font-style: italic;
+    /* --decoration-- */
+    background-color: #b6b6b63a;
+}
+
+
+.container-footer {
+    /* --Block model-- */
+    height: 7vh;
+    /* --decoration-- */
+    background: linear-gradient(300deg, black, 80%, white); 
+}
+.footer {
+    /* --Positioning-- */
+    margin: auto 0;
+    /* --Block model-- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.my-git {
+    /* --Positioning-- */
+    margin-right: 1rem;
+    /*--Typography--*/
+    line-height: 2rem;
+}
+
+.my-git > a,
+.rs-school > a,
+.container-data-school {
+    /* --Block model-- */
+    display: flex;
+    align-items: center;
+}
+.my-git > a > img {
+    /* --Positioning-- */
+    margin-right: 0.7rem;
+    /* --Block model-- */
+    height: 2rem;
+}
+.my-git > a > span{
+    /* --Positioning-- */
+    margin-left: 0.7rem;
+}
+
+.data {
+    /* --Positioning-- */
+    margin-right: 1rem;
+    /*--Typography--*/
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+.rs-school {
+    /* --decoration-- */
+    background-color: #ffffff;
+}
+.rs-school > a > img {
+    /* --Block model-- */
+    padding: 0.3rem;
+    height: 2.5rem;
+}

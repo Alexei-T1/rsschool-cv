@@ -238,25 +238,18 @@ height: auto;
 }
 .code_img {
     /* --Block model-- */
-    width: 405px;
+    max-width: 100%;
+    height: auto;
     /* --decoration-- */
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;    
+    border-radius: 6px;
 } 
 .content_code > figcaption{
     /* --Positioning-- */
     text-indent: 0;
     text-align: center;
-    /* --Block model-- */
-    width: 405px;
     /*--Typography--*/
-    color: #ffffff;
     line-height: 2rem;
-    font-size: 1rem;
-    /* --decoration-- */
-    background-color: #0808088f;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;   
+    font-size: 1rem;  
 }
 
 .languages {

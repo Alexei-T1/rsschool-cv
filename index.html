@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="highlight/styles/dark.min.css">
+    <script src="highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
@@ -13,25 +17,56 @@
 
         <div class="container-header text-white">
             <header class="header">
-                <div class="header_hi">Hi, I'm</div>
-                <h1 class="header_name">
-                    <span class="header_name__firstName">Alexei</span>
-                    <span class="header_name__surName">Turenc<span class="text-black">ko</span></span>
-                </h1>
-                <h2 class="header_devel">beginner Web Developer</h2>
+
+                <div class="header__logo">
+                    <div class="header_hi">Hi, I'm</div>
+                    <h1 class="header_name">
+                        <div class="header_name__wrap">
+                            <div class="header_name__firstName">Alexei</div>
+                            <div class="header_name__surName">Turencko</div>
+                        </div>
+                    </h1>
+                    <h2 class="header_devel">beginner Web Developer</h2>
+                </div>
+
+                <nav class="header__nav nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#about-me" >About Me</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#contacts" >Contacts</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#education" >Experience and Additional education</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#objective" >Objective</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#skills" >Skills</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#code" >Code example</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link link" href="#languages" >Language skills</a>
+                        </li>
+                    </ul>
+                </nav>
             </header>
         </div>
 
         <div class="container-main">
             <main class="main">
                 <div class="right-side text-white">
-                    <div class="my-photo"><img src="image/myPhoto.jpg" alt="Alexei's photo"></div>
-                    <section class="about-me">
+                    <section class="about-me" id="about-me">
+                        <div class="my-photo"><img src="image/myPhoto.jpg" alt="Alexei's photo"></div>
                         <h3 class="title">About Me:</h3>
                         <div class="content">I am studying web development and programming. My work experience is not related to web development can be useful: in setting tasks, work organization and self-organization, getting a result. I have the time and desire to learn.
                         </div>
                     </section>
-                    <section class="contacts">
+                    <section class="contacts" id="contacts">
                         <h3 class="title">Contacts:</h3>
                         <div class="content">
                             <ul>
@@ -46,22 +81,23 @@
 
                 <div class="left-side"> 
                     <div class="left-side-container">
-                        <section class="education">
+                        <section class="education" id="education">
                             <h3 class="title">Experience and Additional education:</h3>
                             <div class="content text-content-bg">
                                 <ul>
                                     <li class="content_li_left"><a href="https://www.youtube.com/c/cs50/featured"><span class="content_li__resource">Course Harvard CS50 2020</span></a></li>
                                     <li class="content_li_left"><a href="https://www.theodinproject.com"><span class="content_li__resource">The Odin Project - Foundations</span></a></li>
                                     <li class="content_li_left"><a href="https://stepik.org"><span class="content_li__resource">Python: A Beginner's Course, advanced course</span></a></li>
+                                    <li class="content_li_left"><a href="https://app.rs.school/certificate/btp5smu4"><span class="content_li__resource">THE ROLLING SCOPES SCHOOL: JS/FE PRE-SCHOOL (Javascript)</span></a></li>
                                 </ul>
                             </div>
                         </section>
-                        <section class="objective">
+                        <section class="objective" id="objective">
                             <h3 class="title">Objective:</h3>
                             <div class="content text-content-bg">My goal to change my professional orientation and job to the profession of JS/Front-end developer. I want to get experience in web development and then think in more detail about my future in web development, IT in general.
                             </div>
                         </section>
-                        <section class="skills">
+                        <section class="skills" id="skills">
                             <h3 class="title">Skills:</h3>
                             <div class="content text-content-bg">
                                 <ul>
@@ -70,16 +106,33 @@
                                 </ul>
                             </div>
                         </section>
-                        <section class="code">
+                        <section class="code" id="code">
                             <h3 class="title">Code example:</h3>
                             <div class="content">
-                                <figure class="content_code">
-                                    <img class="code_img" src="image/examplecode.png" alt="javaScript example code">
-                                    <figcaption>JavaScript example code:  "Reversed Strings"</figcaption>
-                                </figure>
+                                <div class="content__code">
+                                    <pre><code class="javascript code__container">
+function domainName(url){
+
+    url = url.replace(/http:\/\//g, "");
+    url = url.replace(/www./g, "");
+    url = url.replace(/https:\/\//g, "");
+    let urlArray = url.split(".");
+            
+    return urlArray[0];
+}
+                                    </code></pre>
+                                        <div class="code__title item-title"><span class="item-title__text">From Codewars:</span>
+                                            <div class="small-hex is-extra-wide is-inline is-yellow-rank">
+                                                <div class="inner-small-hex is-extra-wide ">
+                                                    <span>5 kyu</span>
+                                                </div>
+                                            </div>
+                                            <a class="item-title__text" href="https://www.codewars.com/kata/514a024011ea4fb54200004b">Extract the domain name from a URL</a>
+                                        </div>
+                                </div>
                             </div>
                         </section>
-                        <section class="languages">
+                        <section class="languages" id="languages">
                             <h3 class="title">Language skills:</h3>
                             <div class="content text-content-bg">
                                 <ul>
@@ -103,5 +156,6 @@
             </footer>
         </div>
     </div>
+
 </body>
 </html>

@@ -43,6 +43,10 @@ body {
     text-shadow: 5px 0 3px black;
 
 }
+.header__burger {
+    display: none;
+}
+
 .header__nav {
 /* --Positioning-- */
 flex: 2 1;
@@ -101,9 +105,6 @@ background: linear-gradient(249deg, black, 94%, rgb(219, 219, 219));
     font-size: 3rem;
     letter-spacing: 5px;   
 }
-@media only screen and (max-width: 1307px) {
- 
-}
 .header_name__firstName {
      /* --Block model-- */
 }
@@ -116,32 +117,7 @@ background: linear-gradient(249deg, black, 94%, rgb(219, 219, 219));
      /*--Typography--*/
      font-size: 1.8rem;  
 }
-@media only screen and (max-width: 580px) {
-    .header__logo {
-        /* --Positioning-- */
-        padding-left: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-shadow: none;
-    
-    }
-    .header_name {
-        /* --Positioning-- */
-        margin-bottom: 1rem;
-         /*--Typography--*/
-        font-size: 2rem;
-        letter-spacing: 3px;   
-    }
-    .header_hi {
-        font-size: 2rem;
-    }
-    .header_devel {
-        /*--Typography--*/
-        font-size: 1rem;  
-   }
 
-}
 .container-main {
     /* --Positioning-- */
     margin-bottom: 2rem;
@@ -182,10 +158,11 @@ background: linear-gradient(249deg, black, 94%, rgb(219, 219, 219));
     .header__nav {
         padding-bottom: 0;
         /* --Positioning-- */
-        flex: none;
+        display: block;
          /* --decoration-- */
         text-shadow: none; 
         background: transparent;
+        transition: left 1s ease;
     }
     .nav__list {
         padding-top: 1.1rem;
@@ -208,6 +185,95 @@ background: linear-gradient(249deg, black, 94%, rgb(219, 219, 219));
     }
     
 }
+@media only screen and (max-width: 645px) {
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
+        margin: 0.5rem;
+        right: -90%;
+    }
+    .header__burger::before,
+    .header__burger::after,
+    .header__burger span {
+        position: absolute;
+        left: 0;
+        height: 10%;
+        width: 100%;
+        transition: all 0.3 ease 0s;
+        background-color: white;
+    }
+    .header__burger::before,
+    .header__burger::after {
+        content: "";
+    }
+    .header__burger::before {
+        top: 0;
+    }
+    .header__burger::after {
+        bottom: 0;
+    }
+    .header__burger span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+    .header__nav {
+        position: absolute;
+        left: -1000px;
+        margin: 0 auto;
+        padding-bottom: 0;
+        /* --Positioning-- */
+        flex: none;
+         /* --decoration-- */
+        text-shadow: none; 
+        background: transparent;
+        transition: left 1s ease;
+    }
+    .nav_open {
+        position: relative;
+        left: 0;
+    }
+    .nav__list {
+        display: block;
+        padding-top: 0;
+    }
+    .nav__list > *:not(:last-child) {
+        margin-right: 0;
+    }
+    .header__nav::before {
+        content: none !important;
+    }
+
+}
+@media only screen and (max-width: 580px) {
+    .header__logo {
+        /* --Positioning-- */
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-shadow: none;
+    
+    }
+    .header_name {
+        /* --Positioning-- */
+        margin-bottom: 1rem;
+         /*--Typography--*/
+        font-size: 2rem;
+        letter-spacing: 3px;   
+    }
+    .header_hi {
+        font-size: 2rem;
+    }
+    .header_devel {
+        /*--Typography--*/
+        font-size: 1rem;  
+   }
+
+}
+
 /* --left side-- */
 .right-side {
     /* --Positioning-- */
@@ -229,6 +295,11 @@ background: linear-gradient(249deg, black, 94%, rgb(219, 219, 219));
     /* --decoration-- */ 
     background: linear-gradient(100deg, black, 93%, white);
     border-left: 1px solid #ffffff;
+}
+@media only screen and (max-width: 780px) {
+    .right-side::before {
+        background: linear-gradient(100deg, black, 94%, #989696);
+    }
 }
 
 .my-photo {

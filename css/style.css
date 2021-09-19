@@ -220,7 +220,7 @@ background: linear-gradient(249deg, black, 94%, rgb(219, 219, 219));
         transform: scale(1) translate(0px, -50%);
     }
     .header__nav {
-        position: absolute;
+    position: absolute;
         left: -1000px;
         margin: 0 auto;
         padding-bottom: 0;
